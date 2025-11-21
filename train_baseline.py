@@ -21,7 +21,7 @@ from torch.utils.data import DataLoader, random_split
 import matplotlib.pyplot as plt
 
 from uniocc_dataset import UniOcc
-from models.simple3d_unet import SimpleOccNet
+from BASELINE_model.simple3d_unet import SimpleOccNet
 
 
 FREE_LABEL = 10  # UniOcc "free space" label
@@ -305,8 +305,7 @@ def main():
     plot_curve(val_losses, "Val Loss", "Loss", "plots/val_loss_curve.png")
     plot_curve(val_ious, "Val IoU", "IoU", "plots/val_iou_curve.png")
 
-    print("\n🎉 Training complete! All plots + logs saved.")
-
+    print("\n Training complete! All plots + logs saved.")
 
 if __name__ == "__main__":
     main()
